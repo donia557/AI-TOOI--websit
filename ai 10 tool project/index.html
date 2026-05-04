@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMIN.ai — Tools Redefining Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="three-canvas"></canvas>
+
+    <div class="site-wrap">
+
+        <nav class="topnav" id="topnav">
+            <div class="topnav-in">
+                <a href="#" class="nav-logo" onclick="go('home');return false;">
+                    <div class="nav-logo-ic"><i class="fas fa-bolt"></i></div>
+                    <span class="nav-logo-tx">DOMIN.ai</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#" class="nav-a active" id="nHome" onclick="go('home');return false;">Tools</a>
+                    <a href="#" class="nav-a" id="nSign" onclick="go('signup');return false;">Sign Up</a>
+                </div>
+                <button class="nav-btn" id="nBtn" onclick="go('signup')">
+                    Get Started <i class="fas fa-arrow-right" style="font-size:0.65rem;"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div class="page active" id="pHome">
+
+            <section class="hero">
+                <div class="hero-grad"></div>
+                <div class="hero-in">
+                    <div class="rv">
+                        <div class="hero-tag"><span class="hl"></span> AI Tools Showcase 2026</div>
+                        <h1 class="hero-title">Ten Tools<br>Redefining <em>Intelligence</em></h1>
+                        <p class="hero-sub">A curated selection of the most impactful artificial intelligence tools available today — each one a breakthrough in its domain.</p>
+                        <div class="scroll-hint"><span>Scroll to explore</span><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider rv"><div class="dl"></div><span class="dt">The Tools</span><div class="dl"></div></div>
+
+            <section class="tools-sec">
+                <div class="sec-hd rv">
+                    <div class="sec-tag">Selected for you</div>
+                    <h2 class="sec-t">What makes the cut</h2>
+                    <p class="sec-d">We evaluated dozens of AI tools on capability, usability, and real-world impact. These ten stand above the rest.</p>
+                </div>
+                <div class="tools-grid" id="grid"></div>
+            </section>
+
+            <footer class="site-ft">
+                <div class="site-ft-in">
+                    <span class="ft-tx">2026 DOMIN.ai. Curated with precision.</span>
+                    <span class="ft-ac">Not affiliated with any listed company</span>
+                </div>
+            </footer>
+        </div>
+
+        <div class="page" id="pSignup">
+            <div class="signup-page">
+                <div class="signup-glow"></div>
+                <div class="signup-lines"></div>
+                <div class="signup-wrap rv" id="sgRv">
+                    <div class="signup-card">
+                        <div id="sgForm">
+                            <div class="sc-ic"><i class="fas fa-user-plus"></i></div>
+                            <h2 class="sc-tt">Create your account</h2>
+                            <p class="sc-sb">Join DOMIN.ai to save your favorite tools and get personalized recommendations.</p>
+                            <form id="regForm" novalidate>
+                                <div class="fg">
+                                    <label class="fl" for="uname">Username</label>
+                                    <input type="text" id="uname" class="fi" placeholder="Choose a username" autocomplete="username">
+                                    <div class="fe" id="unErr">Username must be at least 3 characters</div>
+                                </div>
+                                <div class="fg">
+                                    <label class="fl" for="uemail">Email Address</label>
+                                    <input type="email" id="uemail" class="fi" placeholder="you@example.com" autocomplete="email">
+                                    <div class="fe" id="emErr">Please enter a valid email address</div>
+                                </div>
+                                <div class="fg">
+                                    <label class="fl" for="upass">Password</label>
+                                    <div class="pw-wrap">
+                                        <input type="password" id="upass" class="fi" placeholder="Create a strong password" autocomplete="new-password">
+                                        <button type="button" class="pw-tog" id="pwTog" aria-label="Toggle password"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                    <div class="str-bar"><div class="str-fill" id="strBar"></div></div>
+                                    <div class="str-txt" id="strTxt"></div>
+                                    <div class="fe" id="pwErr">Password must be at least 8 characters</div>
+                                </div>
+                                <div class="fchk">
+                                    <input type="checkbox" id="terms">
+                                    <label for="terms">I agree to the <a href="#" onclick="tst('Terms page coming soon');return false;">Terms of Service</a> and <a href="#" onclick="tst('Privacy page coming soon');return false;">Privacy Policy</a></label>
+                                </div>
+                                <button type="submit" class="sub-btn" id="subBtn"><span class="bt-tx">Create Account</span><div class="spn"></div></button>
+                            </form>
+                            <div class="sc-div">or</div>
+                            <div class="sc-ft"><span>Already have an account? <a href="#" onclick="tst('Login page coming soon');return false;">Sign in</a></span></div>
+                        </div>
+                        <div class="ok-st" id="okSt">
+                            <div class="ok-ic"><i class="fas fa-check"></i></div>
+                            <h3 class="ok-tt">Account created</h3>
+                            <p class="ok-sb">Welcome aboard! Your account is ready. Start exploring the best AI tools curated for you.</p>
+                            <a href="#" class="ok-btn" onclick="go('home');return false;">Explore Tools <i class="fas fa-arrow-right" style="font-size:0.7rem;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tst" id="tstEl"><i class="fas fa-info-circle"></i><span id="tstTx"></span></div>
+
+    <script type="module" src="three-scene.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
