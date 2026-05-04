@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-   <meta name="google-site-verification" content="Esv9GjPXmOxE_WB71liUjSAbtTs1qq5Uel0e0ikqH_s" /> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOMIN.ai — Tools Redefining Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script type="importmap">
     {
@@ -24,6 +23,7 @@
 
     <div class="site-wrap">
 
+        <!-- ========== NAVBAR ========== -->
         <nav class="topnav" id="topnav">
             <div class="topnav-in">
                 <a href="#" class="nav-logo" onclick="go('home');return false;">
@@ -31,8 +31,10 @@
                     <span class="nav-logo-tx">DOMIN.ai</span>
                 </a>
                 <div class="nav-links">
-                    <a href="#" class="nav-a active" id="nHome" onclick="go('home');return false;">Tools</a>
-                    <a href="#" class="nav-a" id="nSign" onclick="go('signup');return false;">Sign Up</a>
+                    <a href="#toolsSection" class="nav-a">Tools</a>
+                    <a href="#aboutSection" class="nav-a">About</a>
+                    <a href="#contactSection" class="nav-a">Contact</a>
+                    <a href="#" class="nav-a" onclick="go('signup');return false;">Sign Up</a>
                 </div>
                 <button class="nav-btn" id="nBtn" onclick="go('signup')">
                     Get Started <i class="fas fa-arrow-right" style="font-size:0.65rem;"></i>
@@ -40,15 +42,17 @@
             </div>
         </nav>
 
+        <!-- ========== الصفحة الرئيسية ========== -->
         <div class="page active" id="pHome">
 
+            <!-- HERO -->
             <section class="hero">
                 <div class="hero-grad"></div>
                 <div class="hero-in">
                     <div class="rv">
-                        <div class="hero-tag"><span class="hl"></span> AI Tools Showcase 2026</div>
-                        <h1 class="hero-title">Ten Tools<br>Redefining <em>Intelligence</em></h1>
-                        <p class="hero-sub">A curated selection of the most impactful artificial intelligence tools available today — each one a breakthrough in its domain.</p>
+                        <div class="hero-tag"><span class="h1"></span> AI Tools 2026</div>
+                        <h1 class="hero-title-en">Tools that double your<br>productivity and save <em>70%</em><br>of your time</h1>
+                        <p class="hero-sub-en">The most powerful AI tools, carefully selected</p>
                         <div class="scroll-hint"><span>Scroll to explore</span><i class="fas fa-chevron-down"></i></div>
                     </div>
                 </div>
@@ -56,13 +60,102 @@
 
             <div class="divider rv"><div class="dl"></div><span class="dt">The Tools</span><div class="dl"></div></div>
 
-            <section class="tools-sec">
+            <!-- TOOLS -->
+            <section class="tools-sec" id="toolsSection">
                 <div class="sec-hd rv">
                     <div class="sec-tag">Selected for you</div>
                     <h2 class="sec-t">What makes the cut</h2>
-                    <p class="sec-d">We evaluated dozens of AI tools on capability, usability, and real-world impact. These ten stand above the rest.</p>
+                    <p class="sec-d">Ten AI tools evaluated on capability, usability, and real-world impact. Each one saves hours of work every single day.</p>
                 </div>
                 <div class="tools-grid" id="grid"></div>
+            </section>
+
+            <!-- ABOUT US -->
+            <section class="about-sec" id="aboutSection">
+                <div class="about-in">
+                    <div class="rv">
+                        <div class="sec-tag">Who we are</div>
+                        <h2 class="sec-t">About DOMIN.ai</h2>
+                    </div>
+                    <div class="about-grid">
+                        <div class="rv rv1">
+                            <p class="about-p">We help people discover new AI tools and leverage them to work smarter, not harder. The AI landscape is evolving faster than ever — new tools launch daily, and knowing which ones actually deliver value can be overwhelming.</p>
+                            <p class="about-p">Our team tests, compares, and curates the most impactful AI tools so you don't have to waste time figuring out what works. Whether you're a developer, designer, marketer, researcher, or entrepreneur — we connect you with the right tools for your workflow.</p>
+                        </div>
+                        <div class="rv rv2">
+                            <div class="about-stats">
+                                <div class="about-stat">
+                                    <div class="about-stat-num">10+</div>
+                                    <div class="about-stat-label">Tools Reviewed</div>
+                                </div>
+                                <div class="about-stat">
+                                    <div class="about-stat-num">70%</div>
+                                    <div class="about-stat-label">Time Saved</div>
+                                </div>
+                                <div class="about-stat">
+                                    <div class="about-stat-num">5+</div>
+                                    <div class="about-stat-label">Categories</div>
+                                </div>
+                            </div>
+                            <div class="about-mission">
+                                <div class="about-mission-ic"><i class="fas fa-rocket"></i></div>
+                                <div>
+                                    <h4 class="about-mission-tt">Our Mission</h4>
+                                    <p class="about-mission-ds">Make artificial intelligence accessible and actionable for everyone — no PhD required.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT US -->
+            <section class="contact-sec" id="contactSection">
+                <div class="contact-in">
+                    <div class="contact-grid">
+                        <div class="rv">
+                            <div class="sec-tag">Get in touch</div>
+                            <h2 class="sec-t">Contact Us</h2>
+                            <p class="about-p" style="margin-bottom:2.5rem;">Have a question, want to suggest a tool, or interested in partnering with us? We'd love to hear from you.</p>
+                            <div class="contact-info">
+                                <div class="contact-info-item">
+                                    <div class="contact-info-ic"><i class="fas fa-envelope"></i></div>
+                                    <div>
+                                        <div class="contact-info-label">Email</div>
+                                        <a href="mailto:doniaamr445@gmail.com" class="contact-info-val">doniaamr445@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="contact-info-item">
+                                    <div class="contact-info-ic"><i class="fas fa-clock"></i></div>
+                                    <div>
+                                        <div class="contact-info-label">Response Time</div>
+                                        <div class="contact-info-val">Within 24 hours</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rv rv1">
+                            <form id="contactForm" class="contact-form" novalidate>
+                                <div class="fg">
+                                    <label class="fl" for="cName">Your Name</label>
+                                    <input type="text" id="cName" class="fi" placeholder="Full name" required>
+                                </div>
+                                <div class="fg">
+                                    <label class="fl" for="cEmail">Email Address</label>
+                                    <input type="email" id="cEmail" class="fi" placeholder="you@example.com" required>
+                                </div>
+                                <div class="fg">
+                                    <label class="fl" for="cMsg">Message</label>
+                                    <textarea id="cMsg" class="fi" rows="5" placeholder="Write your message..." required style="resize:vertical;"></textarea>
+                                </div>
+                                <button type="submit" class="sub-btn" style="width:auto;justify-content:flex-start;">
+                                    <span class="bt-tx">Send Message</span>
+                                    <i class="fas fa-paper-plane" style="font-size:0.75rem;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <footer class="site-ft">
@@ -73,6 +166,7 @@
             </footer>
         </div>
 
+        <!-- ========== صفحة التسجيل ========== -->
         <div class="page" id="pSignup">
             <div class="signup-page">
                 <div class="signup-glow"></div>
